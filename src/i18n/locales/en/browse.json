@@ -1,0 +1,40 @@
+{
+  "title": "All Alternatives",
+  "subtitle": "Explore European and open-source alternatives to US tech giants. Filter by category, country, or pricing to find what you need.",
+  "catalogueComingSoon": "Catalogue Coming Soon",
+  "catalogueComingSoonDesc": "We're building a comprehensive directory of European and open-source alternatives. Check back soon or contribute to the project.",
+  "noResults": "No Results Found",
+  "noResultsDesc": "No alternatives match your current filters. Try adjusting your search or filter criteria.",
+  "filters": {
+    "searchPlaceholder": "Search alternatives...",
+    "searchLabel": "Search alternatives",
+    "clearSearch": "Clear search",
+    "count": "{{filtered}} of {{total}} alternatives",
+    "sortBy": "Sort by",
+    "sortName": "Name (A-Z)",
+    "sortCountry": "Country",
+    "sortCategory": "Category",
+    "gridView": "Grid view",
+    "listView": "List view",
+    "filters": "Filters",
+    "clearAll": "Clear all filters",
+    "categoryTitle": "Category",
+    "countryTitle": "Country",
+    "pricingTitle": "Pricing",
+    "openSourceOnly": "Open Source Only"
+  },
+  "card": {
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "about": "About",
+    "details": "Details",
+    "founded": "Founded",
+    "headquarters": "Headquarters",
+    "license": "License",
+    "tags": "Tags",
+    "visitWebsite": "Visit {{name}} website (opens in new tab)",
+    "website": "Website",
+    "github": "{{name}} on GitHub (opens in new tab)",
+    "githubLabel": "GitHub"
+  }
+}

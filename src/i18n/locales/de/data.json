@@ -1,0 +1,46 @@
+{
+  "categories": {
+    "cloud-storage": { "name": "Cloud-Speicher", "description": "Dateispeicher- und Synchronisierungsdienste" },
+    "email": { "name": "E-Mail", "description": "E-Mail-Anbieter und -Dienste" },
+    "search-engine": { "name": "Suchmaschine", "description": "Web-Suchmaschinen" },
+    "social-media": { "name": "Soziale Medien", "description": "Soziale Netzwerke und Plattformen" },
+    "messaging": { "name": "Messaging", "description": "Instant Messaging und Kommunikation" },
+    "video-hosting": { "name": "Video-Hosting", "description": "Videoplattformen und Streaming" },
+    "office-suite": { "name": "Office-Paket", "description": "Dokumentbearbeitung und Zusammenarbeit" },
+    "maps": { "name": "Karten & Navigation", "description": "Karten- und Navigationsdienste" },
+    "browser": { "name": "Browser", "description": "Webbrowser" },
+    "vpn": { "name": "VPN", "description": "VPN-Dienste" },
+    "analytics": { "name": "Analyse", "description": "Web- und Produktanalyse" },
+    "project-management": { "name": "Projektmanagement", "description": "Aufgaben- und Projektmanagement-Tools" },
+    "password-manager": { "name": "Passwort-Manager", "description": "Passwortverwaltung und Sicherheit" },
+    "ai-ml": { "name": "KI & Maschinelles Lernen", "description": "Plattformen und Tools für künstliche Intelligenz" },
+    "hosting": { "name": "Cloud & Hosting", "description": "Webhosting und Cloud-Infrastruktur" },
+    "payments": { "name": "Zahlungen", "description": "Zahlungsabwicklung und Fintech" },
+    "ecommerce": { "name": "E-Commerce", "description": "Online-Shop-Plattformen" },
+    "other": { "name": "Sonstiges", "description": "Weitere Tools und Dienste" }
+  },
+  "countries": {
+    "de": "Deutschland",
+    "fr": "Frankreich",
+    "nl": "Niederlande",
+    "se": "Schweden",
+    "fi": "Finnland",
+    "es": "Spanien",
+    "it": "Italien",
+    "at": "Österreich",
+    "ch": "Schweiz",
+    "no": "Norwegen",
+    "dk": "Dänemark",
+    "pl": "Polen",
+    "cz": "Tschechien",
+    "ie": "Irland",
+    "pt": "Portugal",
+    "ee": "Estland",
+    "gb": "Vereinigtes Königreich"
+  },
+  "alternatives": {
+    "tuta": {
+      "description": "Ende-zu-Ende-verschlüsselter E-Mail-Dienst aus Deutschland. Früher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschlüsselung und Post-Quanten-Kryptografie."
+    }
+  }
+}

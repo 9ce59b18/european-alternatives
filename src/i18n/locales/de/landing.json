@@ -1,0 +1,34 @@
+{
+  "headline": "Europäische Alternativen",
+  "subtext": "Entdecke europäische und Open-Source-Alternativen zu US-Tech-Giganten. Unterstütze digitale Souveränität, Datenschutz und lokale Innovation.",
+  "stats": {
+    "alternatives": "Alternativen",
+    "categories": "Kategorien",
+    "country_one": "Land",
+    "country_other": "Länder",
+    "openSource": "Open Source"
+  },
+  "browseByCategory": "Nach Kategorie durchsuchen",
+  "alternative_one": "{{count}} Alternative",
+  "alternative_other": "{{count}} Alternativen",
+  "replacesGiants": "Ersetzt {{giants}}",
+  "featuredAlternative": "Empfohlene Alternative",
+  "visit": "{{name}} besuchen",
+  "seeAll": "Alle Alternativen anzeigen",
+  "values": {
+    "gdpr": {
+      "title": "DSGVO-konform",
+      "description": "Europäische Dienste mit Privacy-First-Prinzipien und strengem Datenschutz"
+    },
+    "sovereignty": {
+      "title": "Digitale Souveränität",
+      "description": "Behalte deine Daten in Europa, unter europäischem Recht und europäischer Gerichtsbarkeit"
+    },
+    "openSource": {
+      "title": "Open-Source-Optionen",
+      "description": "Transparente, überprüfbare und von der Community getriebene Software, der du vertrauen kannst"
+    }
+  },
+  "browseAlternatives": "Alternativen durchsuchen",
+  "communityNote": "Von der Community kuratierter Katalog. Beiträge willkommen."
+}

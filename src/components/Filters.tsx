@@ -1,33 +1,15 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { categories } from '../data';
 import type { SelectedFilters, SortBy, ViewMode } from '../types';
 
-const countryOptions = [
-  { code: 'de', name: 'Germany' },
-  { code: 'fr', name: 'France' },
-  { code: 'nl', name: 'Netherlands' },
-  { code: 'se', name: 'Sweden' },
-  { code: 'fi', name: 'Finland' },
-  { code: 'es', name: 'Spain' },
-  { code: 'it', name: 'Italy' },
-  { code: 'at', name: 'Austria' },
-  { code: 'ch', name: 'Switzerland' },
-  { code: 'no', name: 'Norway' },
-  { code: 'dk', name: 'Denmark' },
-  { code: 'pl', name: 'Poland' },
-  { code: 'cz', name: 'Czechia' },
-  { code: 'ie', name: 'Ireland' },
-  { code: 'pt', name: 'Portugal' },
-  { code: 'ee', name: 'Estonia' },
-  { code: 'gb', name: 'United Kingdom' },
+const countryCodes = [
+  'de', 'fr', 'nl', 'se', 'fi', 'es', 'it', 'at',
+  'ch', 'no', 'dk', 'pl', 'cz', 'ie', 'pt', 'ee', 'gb',
 ] as const;
 
-const pricingOptions = [
-  { value: 'free', label: 'Free' },
-  { value: 'freemium', label: 'Freemium' },
-  { value: 'paid', label: 'Paid' },
-];
+const pricingKeys = ['free', 'freemium', 'paid'] as const;
 
 interface FiltersProps {
   searchTerm: string;
@@ -57,6 +39,7 @@ export default function Filters({
   filteredCount,
 }: FiltersProps) {
   const [showFilters, setShowFilters] = useState(false);
+  const { t } = useTranslation(['browse', 'common', 'data']);
 
   const hasActiveFilters =
     selectedFilters.category.length > 0 ||
@@ -84,16 +67,16 @@ export default function Filters({
         </svg>
         <input
           type="text"
-          placeholder="Search alternatives..."
+          placeholder={t('browse:filters.searchPlaceholder')}
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          aria-label="Search alternatives"
+          aria-label={t('browse:filters.searchLabel')}
         />
         {searchTerm && (
           <button
             className="search-clear"
             onClick={() => onSearchChange('')}
-            aria-label="Clear search"
+            aria-label={t('browse:filters.clearSearch')}
           >
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
@@ -104,7 +87,7 @@ export default function Filters({
 
       <div className="filters-controls-row">
         <span className="filters-count">
-          {filteredCount} of {totalCount} alternatives
+          {t('browse:filters.count', { filtered: filteredCount, total: totalCount })}
         </span>
 
         <div className="filters-controls-right">
@@ -112,11 +95,11 @@ export default function Filters({
             <select
               value={sortBy}
               onChange={(e) => onSortChange(e.target.value as SortBy)}
-              aria-label="Sort by"
+              aria-label={t('browse:filters.sortBy')}
             >
-              <option value="name">Name (A-Z)</option>
-              <option value="country">Country</option>
-              <option value="category">Category</option>
+              <option value="name">{t('browse:filters.sortName')}</option>
+              <option value="country">{t('browse:filters.sortCountry')}</option>
+              <option value="category">{t('browse:filters.sortCategory')}</option>
             </select>
             <svg className="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M7 10l5 5 5-5z"/>
@@ -127,7 +110,7 @@ export default function Filters({
             <button
               className={`view-toggle-button ${viewMode === 'grid' ? 'active' : ''}`}
               onClick={() => onViewModeChange('grid')}
-              aria-label="Grid view"
+              aria-label={t('browse:filters.gridView')}
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/>
@@ -136,7 +119,7 @@ export default function Filters({
             <button
               className={`view-toggle-button ${viewMode === 'list' ? 'active' : ''}`}
               onClick={() => onViewModeChange('list')}
-              aria-label="List view"
+              aria-label={t('browse:filters.listView')}
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/>
@@ -153,7 +136,7 @@ export default function Filters({
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
             </svg>
-            Filters
+            {t('browse:filters.filters')}
             {hasActiveFilters && <span className="filter-badge" />}
           </button>
         </div>
@@ -164,7 +147,7 @@ export default function Filters({
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
           </svg>
-          Clear all filters
+          {t('browse:filters.clearAll')}
         </button>
       )}
 
@@ -180,7 +163,7 @@ export default function Filters({
           >
             <div className="filters-section-content">
               <div className="filters-group">
-                <h4 className="filters-group-title">Category</h4>
+                <h4 className="filters-group-title">{t('browse:filters.categoryTitle')}</h4>
                 {categories.map((cat) => (
                   <label key={cat.id} className="filter-label">
                     <input
@@ -196,21 +179,21 @@ export default function Filters({
                     </span>
                     <span className="filter-label-text">
                       <span className="filter-emoji">{cat.emoji}</span>
-                      {cat.name}
+                      {t(`data:categories.${cat.id}.name`)}
                     </span>
                   </label>
                 ))}
               </div>
 
               <div className="filters-group">
-                <h4 className="filters-group-title">Country</h4>
-                {countryOptions.map((c) => (
-                  <label key={c.code} className="filter-label">
+                <h4 className="filters-group-title">{t('browse:filters.countryTitle')}</h4>
+                {countryCodes.map((code) => (
+                  <label key={code} className="filter-label">
                     <input
                       type="checkbox"
                       className="filter-checkbox"
-                      checked={selectedFilters.country.includes(c.code)}
-                      onChange={() => toggleFilter('country', c.code)}
+                      checked={selectedFilters.country.includes(code)}
+                      onChange={() => toggleFilter('country', code)}
                     />
                     <span className="filter-checkbox-custom">
                       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -218,29 +201,29 @@ export default function Filters({
                       </svg>
                     </span>
                     <span className="filter-label-text">
-                      <span className={`fi fi-${c.code} filter-flag`}></span>
-                      {c.name}
+                      <span className={`fi fi-${code} filter-flag`}></span>
+                      {t(`data:countries.${code}`)}
                     </span>
                   </label>
                 ))}
               </div>
 
               <div className="filters-group">
-                <h4 className="filters-group-title">Pricing</h4>
-                {pricingOptions.map((p) => (
-                  <label key={p.value} className="filter-label">
+                <h4 className="filters-group-title">{t('browse:filters.pricingTitle')}</h4>
+                {pricingKeys.map((key) => (
+                  <label key={key} className="filter-label">
                     <input
                       type="checkbox"
                       className="filter-checkbox"
-                      checked={selectedFilters.pricing.includes(p.value)}
-                      onChange={() => toggleFilter('pricing', p.value)}
+                      checked={selectedFilters.pricing.includes(key)}
+                      onChange={() => toggleFilter('pricing', key)}
                     />
                     <span className="filter-checkbox-custom">
                       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
                     </span>
-                    <span className="filter-label-text">{p.label}</span>
+                    <span className="filter-label-text">{t(`common:pricing.${key}`)}</span>
                   </label>
                 ))}
 
@@ -258,7 +241,7 @@ export default function Filters({
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   </span>
-                  <span className="filter-label-text">Open Source Only</span>
+                  <span className="filter-label-text">{t('browse:filters.openSourceOnly')}</span>
                 </label>
               </div>
             </div>

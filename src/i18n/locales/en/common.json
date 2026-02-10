@@ -1,0 +1,27 @@
+{
+  "skipToContent": "Skip to content",
+  "goToHomepage": "Go to homepage",
+  "logoFallback": "EU Alternatives",
+  "logoAlt": "Morpheus Logo",
+  "logoSuffix": "{{name}} logo",
+  "nav": {
+    "browse": "Browse"
+  },
+  "footer": {
+    "createdBy": "Created by Morpheus",
+    "patreon": "Patreon",
+    "website": "Website"
+  },
+  "pricing": {
+    "free": "Free",
+    "freemium": "Freemium",
+    "paid": "Paid"
+  },
+  "openSource": "Open Source",
+  "replaces": "Replaces:",
+  "meta": {
+    "title": "European Alternatives - Discover European & Open Source Software",
+    "description": "Discover European and open-source alternatives to US tech giants. Support digital sovereignty, data privacy, and local innovation.",
+    "ogDescription": "Find European and open-source alternatives to US tech giants. Support digital sovereignty and data privacy."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Alle Alternativen",
+  "subtitle": "Erkunde europäische und Open-Source-Alternativen zu US-Tech-Giganten. Filtere nach Kategorie, Land oder Preismodell.",
+  "catalogueComingSoon": "Katalog in Kürze verfügbar",
+  "catalogueComingSoonDesc": "Wir erstellen ein umfassendes Verzeichnis europäischer und Open-Source-Alternativen. Schau bald wieder vorbei oder trage zum Projekt bei.",
+  "noResults": "Keine Ergebnisse gefunden",
+  "noResultsDesc": "Keine Alternativen entsprechen deinen aktuellen Filtern. Versuche, deine Suche oder Filterkriterien anzupassen.",
+  "filters": {
+    "searchPlaceholder": "Alternativen suchen...",
+    "searchLabel": "Alternativen suchen",
+    "clearSearch": "Suche löschen",
+    "count": "{{filtered}} von {{total}} Alternativen",
+    "sortBy": "Sortieren nach",
+    "sortName": "Name (A-Z)",
+    "sortCountry": "Land",
+    "sortCategory": "Kategorie",
+    "gridView": "Rasteransicht",
+    "listView": "Listenansicht",
+    "filters": "Filter",
+    "clearAll": "Alle Filter löschen",
+    "categoryTitle": "Kategorie",
+    "countryTitle": "Land",
+    "pricingTitle": "Preismodell",
+    "openSourceOnly": "Nur Open Source"
+  },
+  "card": {
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen",
+    "about": "Über",
+    "details": "Details",
+    "founded": "Gegründet",
+    "headquarters": "Hauptsitz",
+    "license": "Lizenz",
+    "tags": "Tags",
+    "visitWebsite": "{{name}}-Webseite besuchen (öffnet in neuem Tab)",
+    "website": "Webseite",
+    "github": "{{name}} auf GitHub (öffnet in neuem Tab)",
+    "githubLabel": "GitHub"
+  }
+}

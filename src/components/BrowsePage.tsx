@@ -1,5 +1,7 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 import { motion } from 'framer-motion';
 import { alternatives, categories } from '../data';
 import AlternativeCard from './AlternativeCard';
@@ -10,6 +12,7 @@ const validCategoryIds = new Set<string>(categories.map((c) => c.id));
 
 export default function BrowsePage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const { t } = useTranslation('browse');
 
   // Stable ref for setSearchParams to avoid dependency array issues
   const setSearchParamsRef = useRef(setSearchParams);
@@ -107,8 +110,9 @@ export default function BrowsePage() {
         (alt) =>
           alt.name.toLowerCase().includes(term) ||
           alt.description.toLowerCase().includes(term) ||
+          i18n.t(`data:alternatives.${alt.id}.description`, { defaultValue: '' }).toLowerCase().includes(term) ||
           alt.replacesUS.some((r) => r.toLowerCase().includes(term)) ||
-          alt.tags.some((t) => t.toLowerCase().includes(term))
+          alt.tags.some((tag) => tag.toLowerCase().includes(term))
       );
     }
 
@@ -158,10 +162,9 @@ export default function BrowsePage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="browse-title">All Alternatives</h1>
+        <h1 className="browse-title">{t('title')}</h1>
         <p className="browse-subtitle">
-          Explore European and open-source alternatives to US tech giants.
-          Filter by category, country, or pricing to find what you need.
+          {t('subtitle')}
         </p>
       </motion.div>
 
@@ -210,11 +213,8 @@ export default function BrowsePage() {
                 <div className="empty-icon" aria-hidden="true">
                   <span className="fi fi-eu"></span>
                 </div>
-                <h2>Catalogue Coming Soon</h2>
-                <p>
-                  We're building a comprehensive directory of European and open-source
-                  alternatives. Check back soon or contribute to the project.
-                </p>
+                <h2>{t('catalogueComingSoon')}</h2>
+                <p>{t('catalogueComingSoonDesc')}</p>
               </div>
             ) : (
               <div className="empty-catalogue">
@@ -223,8 +223,8 @@ export default function BrowsePage() {
                     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                   </svg>
                 </div>
-                <h2>No Results Found</h2>
-                <p>No alternatives match your current filters. Try adjusting your search or filter criteria.</p>
+                <h2>{t('noResults')}</h2>
+                <p>{t('noResultsDesc')}</p>
               </div>
             )}
           </motion.div>

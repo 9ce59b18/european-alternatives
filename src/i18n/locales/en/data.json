@@ -1,0 +1,46 @@
+{
+  "categories": {
+    "cloud-storage": { "name": "Cloud Storage", "description": "File storage and sync services" },
+    "email": { "name": "Email", "description": "Email providers and services" },
+    "search-engine": { "name": "Search Engine", "description": "Web search engines" },
+    "social-media": { "name": "Social Media", "description": "Social networking platforms" },
+    "messaging": { "name": "Messaging", "description": "Instant messaging and communication" },
+    "video-hosting": { "name": "Video Hosting", "description": "Video platforms and streaming" },
+    "office-suite": { "name": "Office Suite", "description": "Document editing and collaboration" },
+    "maps": { "name": "Maps & Navigation", "description": "Mapping and navigation services" },
+    "browser": { "name": "Browser", "description": "Web browsers" },
+    "vpn": { "name": "VPN", "description": "Virtual private network services" },
+    "analytics": { "name": "Analytics", "description": "Web and product analytics" },
+    "project-management": { "name": "Project Management", "description": "Task and project management tools" },
+    "password-manager": { "name": "Password Manager", "description": "Password management and security" },
+    "ai-ml": { "name": "AI & Machine Learning", "description": "Artificial intelligence platforms and tools" },
+    "hosting": { "name": "Cloud & Hosting", "description": "Web hosting and cloud infrastructure" },
+    "payments": { "name": "Payments", "description": "Payment processing and fintech" },
+    "ecommerce": { "name": "E-Commerce", "description": "Online store platforms" },
+    "other": { "name": "Other", "description": "Other tools and services" }
+  },
+  "countries": {
+    "de": "Germany",
+    "fr": "France",
+    "nl": "Netherlands",
+    "se": "Sweden",
+    "fi": "Finland",
+    "es": "Spain",
+    "it": "Italy",
+    "at": "Austria",
+    "ch": "Switzerland",
+    "no": "Norway",
+    "dk": "Denmark",
+    "pl": "Poland",
+    "cz": "Czechia",
+    "ie": "Ireland",
+    "pt": "Portugal",
+    "ee": "Estonia",
+    "gb": "United Kingdom"
+  },
+  "alternatives": {
+    "tuta": {
+      "description": "End-to-end encrypted email service built in Germany. Formerly known as Tutanota, Tuta offers secure email, calendar, and contacts with zero-knowledge encryption and post-quantum cryptography."
+    }
+  }
+}

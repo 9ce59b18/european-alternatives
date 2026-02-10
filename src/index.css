@@ -202,6 +202,42 @@ button:disabled {
   gap: var(--spacing-md);
 }
 
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  min-width: 2rem;
+}
+
+.lang-button:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.lang-button.active {
+  background: var(--accent-primary);
+  color: white;
+}
+
 .nav-link {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-sm);

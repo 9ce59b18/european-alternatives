@@ -1,0 +1,34 @@
+{
+  "headline": "European Alternatives",
+  "subtext": "Discover European and open-source alternatives to US tech giants. Support digital sovereignty, data privacy, and local innovation.",
+  "stats": {
+    "alternatives": "Alternatives",
+    "categories": "Categories",
+    "country_one": "Country",
+    "country_other": "Countries",
+    "openSource": "Open Source"
+  },
+  "browseByCategory": "Browse by Category",
+  "alternative_one": "{{count}} alternative",
+  "alternative_other": "{{count}} alternatives",
+  "replacesGiants": "Replaces {{giants}}",
+  "featuredAlternative": "Featured Alternative",
+  "visit": "Visit {{name}}",
+  "seeAll": "See All Alternatives",
+  "values": {
+    "gdpr": {
+      "title": "GDPR Compliant",
+      "description": "European services built with privacy-first principles and strict data protection"
+    },
+    "sovereignty": {
+      "title": "Digital Sovereignty",
+      "description": "Keep your data in Europe, under European law and jurisdiction"
+    },
+    "openSource": {
+      "title": "Open Source Options",
+      "description": "Transparent, auditable, and community-driven software you can trust"
+    }
+  },
+  "browseAlternatives": "Browse Alternatives",
+  "communityNote": "Community-curated catalogue. Contributions welcome."
+}
