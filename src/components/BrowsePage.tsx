@@ -108,6 +108,7 @@ export default function BrowsePage() {
           baseDescription.includes(term) ||
           localizedDescription.includes(term) ||
           alternative.replacesUS.some((replace) => replace.toLowerCase().includes(term)) ||
+          (alternative.usVendorComparisons ?? []).some((vendor) => vendor.name.toLowerCase().includes(term)) ||
           alternative.tags.some((tag) => tag.toLowerCase().includes(term))
         );
       });

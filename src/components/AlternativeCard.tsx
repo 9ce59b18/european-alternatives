@@ -25,6 +25,13 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
   })();
 
   const isTrustScorePending = alternative.trustScoreStatus !== 'ready';
+  const usVendorComparisons = alternative.usVendorComparisons?.length
+    ? alternative.usVendorComparisons
+    : alternative.replacesUS.map((name) => ({
+      id: `us-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`,
+      name,
+      trustScoreStatus: 'pending' as const,
+    }));
 
   return (
     <motion.div
@@ -62,10 +69,15 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
       <p className="alt-card-description">{description}</p>
 
       <div className="alt-card-replaces">
-        <span className="alt-card-replaces-label">{t('common:replaces')}</span>
-        <div className="alt-card-replaces-list">
-          {alternative.replacesUS.map((name) => (
-            <span key={name} className="alt-card-replaces-item">{name}</span>
+        <span className="alt-card-replaces-label">{t('browse:card.usVendorComparison')}</span>
+        <div className="alt-card-us-vendor-list">
+          {usVendorComparisons.map((vendor) => (
+            <div key={vendor.id} className="alt-card-us-vendor-item">
+              <span className="alt-card-us-vendor-name">{vendor.name}</span>
+              <span className="alt-card-badge alt-card-badge-trust-pending">
+                {t('browse:card.trustScorePending')}
+              </span>
+            </div>
           ))}
         </div>
       </div>

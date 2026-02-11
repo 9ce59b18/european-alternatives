@@ -36,6 +36,7 @@
     "website": "Webseite",
     "github": "{{name}} auf GitHub (öffnet in neuem Tab)",
     "githubLabel": "GitHub",
+    "usVendorComparison": "US-Anbieter-Vergleich",
     "trustScorePending": "Trust-Score ausstehend"
   }
 }

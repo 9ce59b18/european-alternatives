@@ -3,6 +3,7 @@ import { manualAlternatives } from './manualAlternatives';
 import { researchAlternatives } from './researchAlternatives';
 import { reservationsById } from './trustOverrides';
 import { calculateTrustScore } from '../utils/trustScore';
+import { buildUSVendorComparisons } from './usVendors';
 
 function mergeCatalogue(): Alternative[] {
   const deduped = new Map<string, Alternative>();
@@ -28,6 +29,7 @@ function mergeCatalogue(): Alternative[] {
       ...alternative,
       logo: alternative.logo ?? `/logos/${alternative.id}.svg`,
       reservations,
+      usVendorComparisons: buildUSVendorComparisons(alternative.replacesUS),
       trustScoreStatus: 'pending' as const,
       trustScoreBreakdown: trustScore.breakdown,
     };

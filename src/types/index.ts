@@ -10,6 +10,7 @@ export interface Alternative {
   country: CountryCode;
   category: CategoryId;
   replacesUS: string[];
+  usVendorComparisons?: USVendorComparison[];
   isOpenSource: boolean;
   openSourceLevel?: OpenSourceLevel;
   githubUrl?: string;
@@ -22,6 +23,12 @@ export interface Alternative {
   trustScore?: number;
   trustScoreStatus?: TrustScoreStatus;
   trustScoreBreakdown?: TrustScoreBreakdown;
+}
+
+export interface USVendorComparison {
+  id: string;
+  name: string;
+  trustScoreStatus: 'pending';
 }
 
 export interface Reservation {
