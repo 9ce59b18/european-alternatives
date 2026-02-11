@@ -505,6 +505,16 @@ button:disabled {
   margin-right: auto;
 }
 
+.landing-note-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.landing-note-link:hover {
+  color: var(--accent-secondary);
+}
+
 /* Landing Stats */
 .landing-stats {
   display: flex;

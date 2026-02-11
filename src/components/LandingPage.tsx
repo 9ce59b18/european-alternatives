@@ -159,7 +159,16 @@ export default function LandingPage() {
         </motion.div>
 
         <motion.p className="landing-note" variants={fadeUp}>
-          {t('landing:communityNote')}
+          {t('landing:communityNote.prefix')}{' '}
+          <a
+            href="https://github.com/TheMorpheus407/european-alternatives/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="landing-note-link"
+          >
+            {t('landing:communityNote.linkLabel')}
+          </a>{' '}
+          {t('landing:communityNote.suffix')}
         </motion.p>
       </motion.div>
     </div>
